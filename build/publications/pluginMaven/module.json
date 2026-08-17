@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "sw.autotest.generator",
+    "module": "shawen-autotest-generator",
+    "version": "1.0-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "9.5.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "shawen-autotest-generator-1.0-SNAPSHOT.jar",
+          "url": "shawen-autotest-generator-1.0-SNAPSHOT.jar",
+          "size": 87585,
+          "sha512": "87761b4b1797df6ba505a8d70f0e3f0a73d9e16ffd4ca9c5b4b6dabb3f05e0044d37a6792723f0d21962b18d96093340a64a0e4cb508520d56a80c0e860d62d2",
+          "sha256": "7bee952bf706d5a2924b4953ccdde27c2f54849d81a028430db622ce2e98f525",
+          "sha1": "b32e43135d0b9152b30f4dab9ca45b0fcf33a5a4",
+          "md5": "9448dcb72e10fa59c5e239255e93915b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 25,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.swagger.parser.v3",
+          "module": "swagger-parser",
+          "version": {
+            "requires": "2.1.42"
+          }
+        },
+        {
+          "group": "io.swagger.core.v3",
+          "module": "swagger-models",
+          "version": {
+            "requires": "2.2.52"
+          }
+        },
+        {
+          "group": "org.openapitools",
+          "module": "openapi-generator-gradle-plugin",
+          "version": {
+            "requires": "7.14.0"
+          }
+        },
+        {
+          "group": "org.slf4j",
+          "module": "slf4j-api",
+          "version": {
+            "requires": "2.0.17"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "shawen-autotest-generator-1.0-SNAPSHOT.jar",
+          "url": "shawen-autotest-generator-1.0-SNAPSHOT.jar",
+          "size": 87585,
+          "sha512": "87761b4b1797df6ba505a8d70f0e3f0a73d9e16ffd4ca9c5b4b6dabb3f05e0044d37a6792723f0d21962b18d96093340a64a0e4cb508520d56a80c0e860d62d2",
+          "sha256": "7bee952bf706d5a2924b4953ccdde27c2f54849d81a028430db622ce2e98f525",
+          "sha1": "b32e43135d0b9152b30f4dab9ca45b0fcf33a5a4",
+          "md5": "9448dcb72e10fa59c5e239255e93915b"
+        }
+      ]
+    }
+  ]
+}

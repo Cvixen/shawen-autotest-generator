@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+group = 'sw.autotest.generator'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+gradlePlugin {
+    plugins {
+        swPlugin {
+            id = 'sw.autotest.generator'
+            implementationClass = 'sw.autotest.generator.SwPlugin'
+        }
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:6.0.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    compileOnly 'org.projectlombok:lombok:1.18.46'
+    annotationProcessor 'org.projectlombok:lombok:1.18.46'
+    implementation 'io.swagger.parser.v3:swagger-parser:2.1.42'
+    implementation 'io.swagger.core.v3:swagger-models:2.2.52'
+    implementation "org.openapitools:openapi-generator-gradle-plugin:7.14.0"
+    implementation "org.slf4j:slf4j-api:2.0.17"
+}
+
+test {
+    useJUnitPlatform()
+}
+
